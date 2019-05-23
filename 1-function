@@ -1,0 +1,90 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int multiply(int a, int b)
+{
+	return (a * b);
+}
+
+double divide(double a, double b)
+{
+	return (a / b);
+}
+
+int add(int a, int b)
+{
+	return (a + b);
+}
+
+int subtract(int a, int b)
+{
+	return (a - b);
+}
+
+int modulo(int a, int b)
+{
+	return (a % b);
+}
+
+int main()
+{
+	int a, b, choice;
+	char i;
+	i = 'y';
+	while (i == 'y' || i == 'Y')
+	{
+		cout << "Menu:" << endl;
+		cout << "1. Add" << endl;
+		cout << "2. Subtract" << endl;
+		cout << "3. Multiply" << endl;
+		cout << "4. Divide" << endl;
+		cout << "5. Modulus" << endl;
+		cin >> choice;
+		cout << "Enter 1st integer" << endl;
+		cin >> a;
+		cout << "Enter second integer" << endl;
+		cin >> b;
+
+		switch (choice)
+		{
+		case 1:
+			cout << "The result is: " << add(a, b) << endl;;
+			cout << "Press Y to continue ";
+			cin >> i;
+			break;
+
+		case 2:
+			cout << "The result is: " << subtract(a, b) << endl;;
+			cout << "Press Y to continue ";
+			cin >> i;
+			break;
+
+		case 3:
+			cout << "The result is: " << multiply(a, b) << endl;;
+			cout << "Press Y to continue ";
+			cin >> i;
+			break;
+
+		case 4:
+			static_cast<double>(a);
+			static_cast<double>(b);
+			cout << "The result is: " << divide(a, b) << endl;;
+			cout << "Press Y to continue ";
+			cin >> i;
+			break;
+
+		case 5:
+			cout << "The result is: " << modulo(a, b) << endl;;
+			cout << "Press Y to continue ";
+			cin >> i;
+			break;
+
+		default:
+			cout << "invalid" << endl;
+		}
+	}
+	_getch();
+	return 0;
+}
